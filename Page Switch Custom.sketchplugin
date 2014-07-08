@@ -1,0 +1,37 @@
+// Switch between pages (cmd ')
+
+var current_page = [doc currentPage]
+var pages = [doc pages]
+var number_pages = [pages count]
+
+var current_page_index = [pages indexOfObject:current_page]
+
+function createSelect(msg, items, selectedItemIndex){
+  selectedItemIndex = selectedItemIndex || 0
+
+  var accessory = [[NSComboBox alloc] initWithFrame:NSMakeRect(0,0,200,25)]
+  [accessory addItemsWithObjectValues:items]
+  [accessory selectItemAtIndex:selectedItemIndex]
+
+  var alert = [[NSAlert alloc] init]
+  [alert setMessageText:msg]
+  [alert addButtonWithTitle:'OK']
+  [alert addButtonWithTitle:'Cancel']
+  [alert setAccessoryView:accessory]
+
+  var responseCode = [alert runModal]
+  var sel = [accessory indexOfSelectedItem]
+
+  return [responseCode, sel]
+}
+
+var options = []
+for (var i = 0; i < number_pages; i++) {
+	var p = pages[i]
+	options[i] = [p name]
+}
+
+var choice = createSelect('Choose the page',options, 1)
+var switch_to_index = choice[1]
+[doc setCurrentPage:pages[switch_to_index]]
+
