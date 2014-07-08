@@ -13,7 +13,5 @@ Installation
 How to use
 ----------
 
-You can use it in two manners:
-
 * `alt + /` will quickly change pages
 * `alt + '` will prompt to select a page
