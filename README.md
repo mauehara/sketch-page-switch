@@ -1,7 +1,7 @@
 Sketch Page Switch
 ==================
 
-A dummy plugin to quickly change pages using shortcuts.
+A dummy plugin to quickly switch between pages using shortcuts.
 
 Installation
 ------------
