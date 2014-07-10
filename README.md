@@ -13,5 +13,6 @@ Installation
 How to use
 ----------
 
-* `alt + /` will quickly change pages
-* `alt + '` will prompt to select a page
+* `cmd + /` will quickly change pages
+* `cmd + '` will prompt to select a page
+* `cmd + p` will create a new page
