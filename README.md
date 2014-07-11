@@ -13,6 +13,7 @@ Installation
 How to use
 ----------
 
-* `cmd + /` will quickly change pages
+* `cmd + l` will go to the next page
+* `cmd + k` will go to the previous page
 * `cmd + '` will prompt to select a page
 * `cmd + p` will create a new page
