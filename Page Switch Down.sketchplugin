@@ -1,0 +1,10 @@
+// Switch between pages (cmd k)
+
+var current_page = [doc currentPage]
+var pages = [doc pages]
+var number_pages = [pages count]
+
+var current_page_index = [pages indexOfObject:current_page]
+
+if (current_page_index > 0) [doc setCurrentPage:pages[current_page_index-1]]
+else [doc setCurrentPage:pages[number_pages-1]]

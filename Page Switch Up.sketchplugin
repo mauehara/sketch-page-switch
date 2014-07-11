@@ -1,4 +1,4 @@
-// Switch between pages (cmd /)
+// Switch between pages (cmd l)
 
 var current_page = [doc currentPage]
 var pages = [doc pages]

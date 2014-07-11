@@ -32,6 +32,8 @@ for (var i = 0; i < number_pages; i++) {
 }
 
 var choice = createSelect('Choose the page',options, 1)
-var switch_to_index = choice[1]
-[doc setCurrentPage:pages[switch_to_index]]
+if (choice[0] == 1000) {
+  var switch_to_index = choice[1]
+  [doc setCurrentPage:pages[switch_to_index]] 
+}
 
