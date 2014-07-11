@@ -7,9 +7,10 @@ var number_pages = [pages count]
 var default_name = "Page " + (number_pages + 1)
 
 var page_name = [doc askForUserInput:"Give the page a name!" initialValue:default_name]
-new_page.setName(page_name)
-
-[[doc documentData] addPage:new_page]
-[doc setCurrentPage:new_page]
+if (page_name) {
+	new_page.setName(page_name)
+	[[doc documentData] addPage:new_page]
+	[doc setCurrentPage:new_page]	
+}
 
 
